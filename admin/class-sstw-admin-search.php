@@ -78,7 +78,7 @@ class Sstw_Admin_Search
                 'title' => get_the_title(),
                 'originalTitle' => get_the_title(),
                 'url' => get_edit_post_link(0, 'edit'),
-                'aliases' => [get_the_title(), get_the_excerpt()],
+                'aliases' => [get_the_excerpt()],
                 'type' => get_post_type(),
                 'typeLabel' => $types[get_post_type()]['label'],
                 'actions' => [
@@ -123,7 +123,7 @@ class Sstw_Admin_Search
                 'title' => $term->name,
                 'originalTitle' => $term->name,
                 'url' => esc_url(get_edit_term_link($term->term_id, $term->taxonomy)),
-                'aliases' => [$term->name, $term->description],
+                'aliases' => [$term->description],
                 'type' => $term->taxonomy,
                 'typeLabel' => $taxonomies[$term->taxonomy]['label'],
                 'actions' => [
@@ -162,7 +162,7 @@ class Sstw_Admin_Search
                 'title' => $user->display_name,
                 'originalTitle' => $user->display_name,
                 'url' => esc_url(get_edit_user_link($user->ID)),
-                'aliases' => [$user->display_name, $user->user_email],
+                'aliases' => [$user->user_email],
                 'type' => 'user',
                 'typeLabel' => __('Users', 'sstw'),
                 'actions' => []
